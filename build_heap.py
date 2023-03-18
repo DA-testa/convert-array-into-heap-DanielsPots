@@ -37,7 +37,7 @@ def main():
         # input from keyboard
         n = int(input())
         data = list(map(int, input().split()))
-    elif:
+    elif input_type == "F":
         test_number = input("Enter test number: ").strip()
         if test_number.startswith("0"):
             test_number = test_number[1:] # remove leading zero
