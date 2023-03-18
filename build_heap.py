@@ -32,14 +32,16 @@ def main():
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-    input_type = input("Enter input type (I - from keyboard or F - from file): ").strip()
+    input_type = input().strip()
     if input_type == "I":
         # input from keyboard
         n = int(input())
         data = list(map(int, input().split()))
     elif input_type == "F":
-        test_number = input("Enter test number (e.g. 04): ")
-        test_path = f"/workspaces/convert-array-into-heap-DanielsPots/tests/{test_number}"
+        test_number = input("Enter test number: ").strip()
+        if test_number.startswith("0"):
+            test_number = test_number[1:] # remove leading zero
+        test_path = f"/workspaces/convert-array-into-heap-DanielsPots/tests/{int(test_number):02d}"
         with open(test_path, "r") as f:
             n = int(f.readline())
             data = list(map(int, f.readline().split()))
