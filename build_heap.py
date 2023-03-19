@@ -38,7 +38,7 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
     elif input_type == "F":
-        test_number = input("Enter test number: ").strip()
+        test_number = input().strip()
         if test_number.startswith("0"):
             test_number = test_number[1:] # remove leading zero
         test_path = f"/workspaces/convert-array-into-heap-DanielsPots/tests/{int(test_number):02d}"
