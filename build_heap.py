@@ -39,10 +39,7 @@ def main():
         data = list(map(int, input().split()))
     elif input_type == "F":
         test_number = input().strip()
-        #if test_number.startswith("0"):
-           # test_number = test_number[1:] # remove leading zero
-        test_path = "/workspaces/convert-array-into-heap-DanielsPots/tests/04"
-        with open(test_path, "r") as f:
+        with open(f"tests/{test_number}", "r") as f:
             n = int(f.readline())
             data = list(map(int, f.readline().split()))
     else:
